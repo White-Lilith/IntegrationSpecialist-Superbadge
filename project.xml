@@ -26,4 +26,21 @@
         <members>ProjectService</members>
         <name>NamedCredential</name>
     </types>
+    <types>
+        <members>ProjectService</members>
+        <name>ConnectedApp</name>
+    </types>
+    <types>
+        <members>ProjectCalloutServiceMock</members>
+        <members>ProjectCalloutServiceMockFailure</members>
+        <members>ProjectCalloutServiceTest</members>
+        <members>ProjectRESTService</members>
+        <members>ProjectRESTServiceTest</members>
+        <members>BillingCalloutService</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>ProjectTrigger</members>
+        <name>ApexTrigger</name>
+    </types>
 </Package>
