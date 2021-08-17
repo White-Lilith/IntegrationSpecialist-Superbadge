@@ -37,10 +37,18 @@
         <members>ProjectRESTService</members>
         <members>ProjectRESTServiceTest</members>
         <members>BillingCalloutService</members>
+        <members>BillingServiceProxy</members>
+        <members>BillingCalloutServiceMock</members>
+        <members>BillingCalloutServiceMockFailure</members>
+        <members>BillingCalloutServiceTest</members>
         <name>ApexClass</name>
     </types>
     <types>
         <members>ProjectTrigger</members>
         <name>ApexTrigger</name>
+    </types>
+    <types>
+        <members>BillingService</members>
+        <name>ExternalDataSource</name>
     </types>
 </Package>
