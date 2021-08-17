@@ -21,10 +21,10 @@ private class ProjectCalloutServiceTest {
                                                           WHERE Type = 'New Project' 
                                                           AND StageName = 'Closed Won']).keySet());
 
-    test.SetMock(HttpCalloutMock.class,new ProjectCalloutServiceMock());
-    test.StartTest();
+    Test.SetMock(HttpCalloutMock.class,new ProjectCalloutServiceMock());
+    Test.StartTest();
     ProjectCalloutService.PostOpportunityToPMS(ids);
-    test.StopTest();
+    Test.StopTest();
     Opportunity opportunity = [SELECT Id, StageName FROM Opportunity][0];
     System.assertEquals(opportunity.StageName, 'Submitted Project');
   }
@@ -34,10 +34,10 @@ private class ProjectCalloutServiceTest {
                                                           WHERE Type = 'New Project' 
                                                           AND StageName = 'Closed Won']).keySet());
 
-    test.SetMock(HttpCalloutMock.class,new ProjectCalloutServiceMockFailure());
-    test.StartTest();
+    Test.SetMock(HttpCalloutMock.class,new ProjectCalloutServiceMockFailure());
+    Test.StartTest();
     ProjectCalloutService.PostOpportunityToPMS(ids);
-    test.StopTest();
+    Test.StopTest();
     Opportunity opportunity = [SELECT Id, StageName FROM Opportunity][0];
     System.assertEquals(opportunity.StageName, 'Resubmit Project');
   }
